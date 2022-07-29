@@ -152,7 +152,8 @@ h6 {
   fill: var(--hover-font-color);
 }
 .contact-list .link {
-  display: block;
+  display: inline-flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -165,7 +166,9 @@ h6 {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-
+.contact-link:hover .contact-icon {
+  fill: var(--hover-font-color);
+}
 /*------------- HERO SECTION -------------*/
 
 .section-hero {
@@ -332,11 +335,13 @@ h6 {
   margin-right: 10px;
 }
 .social-network-link {
-  display: block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   fill: var(--icon-color);
-  background-color: red;
+  background-color: transparent;
   border-radius: 50%;
   border: none;
 }
@@ -386,6 +391,16 @@ h6 {
   padding-bottom: 60px;
   background-color: var(--secondary-bg-color);
 }
+.container-footer {
+  display: flex;
+}
+.one {
+  width: 231px;
+  margin-right: 70px;
+}
+.two {
+  align-items: flex-start;
+}
 .footer-link {
   display: block;
   margin-bottom: 20px;
@@ -404,7 +419,20 @@ h6 {
   font-style: normal;
   color: var(--grey-font-color);
 }
+.footer-header {
+  margin-top: 12px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 
+  color: #ffffff;
+}
+.footer-social-list {
+  display: flex;
+}
 /* ----------------- PAGE PORTFOLIO -----------------*/
 
 /* ----------------- SECTION CARD -------------------*/
