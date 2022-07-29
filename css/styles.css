@@ -15,7 +15,7 @@
   --rbtn-bg-color: #f5f4fa;
 
   --border-color: #ececec;
-  --border-icon-color: #afb1b8;
+  --icon-color: #afb1b8;
 }
 
 /*----------------- GLOBAL STYLES -----------------*/
@@ -144,19 +144,22 @@ h6 {
 .contact-list {
   display: flex;
 }
+.contact-icon {
+  fill: var(--secondary-font-color);
+  margin-right: 10px;
+}
+.contact-icon:hover {
+  fill: var(--hover-font-color);
+}
 .contact-list .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 }
-
-.contact-icon {
-  margin-right: 10px;
-}
 .contact-item:not(:last-child) {
   margin-right: 50px;
 }
-.contact-item > .link {
+.contact-link {
   color: var(--secondary-font-color);
   font-weight: 500;
   line-height: 1.14;
@@ -204,13 +207,12 @@ h6 {
 .section-quality-item:not(:last-child) {
   margin-right: 30px;
 }
-.section-quality-item::before {
+/* .section-quality-item::before {
   content: "";
   display: block;
   height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
-  /* outline: 1px solid tomato; */
   margin-bottom: 30px;
   background-size: 70px 70px;
   background-repeat: no-repeat;
@@ -227,6 +229,9 @@ h6 {
 }
 .section-quality-item.icon-astronaut::before {
   background-image: url("../icon/astronaut.svg");
+} */
+.section-quality-icon {
+  margin-bottom: 30px;
 }
 .section-quality-title {
   margin-bottom: 10px;
@@ -269,7 +274,11 @@ h6 {
 }
 
 /*------------- TEAM SECTION -------------*/
-
+.section-team {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: #f5f4fa;
+}
 .team-header {
   margin-bottom: 50px;
   font-weight: 700;
@@ -307,6 +316,7 @@ h6 {
   text-align: center;
 }
 .team-text {
+  margin-bottom: 16px;
   color: var(--secondary-font-color);
 
   font-size: 16px;
@@ -314,13 +324,35 @@ h6 {
 
   text-align: center;
 }
-
+.social-network-list {
+  display: flex;
+  justify-content: center;
+}
+.social-network-item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-network-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  fill: var(--icon-color);
+  background-color: red;
+  border-radius: 50%;
+  border: none;
+}
+.social-network-icon {
+  width: 20px;
+  height: 20px;
+}
+.social-network-link:hover {
+  fill: #fff;
+  background-color: var(--hover-font-color);
+}
 /*------------- CLIENTS SECTION -------------*/
 .section-clients {
   text-align: center;
 }
-/* .section {
-} */
+
 .clients-header {
   margin-bottom: 50px;
 }
@@ -335,11 +367,16 @@ h6 {
   border-radius: 4px;
 }
 .clients-icon {
-  width: 106px;
-  height: 60px;
-  fill: var(--border-icon-color);
+  width: 170px;
+  height: 92px;
+  fill: var(--icon-color);
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
 }
-
+.clients-icon:hover {
+  fill: var(--hover-font-color);
+  border-color: var(--hover-font-color);
+}
 /* ----------------- FOOTER -----------------*/
 
 .footer {
