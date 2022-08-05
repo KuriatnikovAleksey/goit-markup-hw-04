@@ -146,7 +146,7 @@ h6 {
   display: flex;
 }
 .contact-icon {
-  fill: var(--secondary-font-color);
+  fill: currentColor;
   margin-right: 10px;
 }
 .contact-link {
@@ -163,10 +163,6 @@ h6 {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-}
-.contact-link:hover .contact-icon,
-.contact-link:focus .contact-icon {
-  fill: var(--hover-font-color);
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -204,13 +200,13 @@ h6 {
 
 /*------------- QUALITY SECTION -------------*/
 
-.section-quality-list {
+.quality-list {
   display: flex;
 }
-.section-quality-item {
+.quality-item {
   width: calc((100% - 90px) / 4);
 }
-.section-quality-item:not(:last-child) {
+.quality-item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -240,11 +236,17 @@ h6 {
 .section-quality-item.icon-astronaut::before {
   background-image: url("../icon/astronaut.svg");
 } */
-
-.section-quality-icon {
+.quality-item-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
   margin-bottom: 30px;
+
+  background-color: #f5f4fa;
+  border-radius: 4px;
 }
-.section-quality-title {
+.quality-title {
   margin-bottom: 10px;
 
   font-weight: 700;
@@ -252,7 +254,7 @@ h6 {
   line-height: 1.14;
   text-transform: uppercase;
 }
-.section-quality-text {
+.quality-text {
   color: var(--secondary-font-color);
 }
 
